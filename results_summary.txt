@@ -1,0 +1,36 @@
+=====================================
+RESULTS SUMMARY
+=====================================
+
+DATA PREPROCESSING:
+- Total years in merged dataset: 49
+- Year range in merged dataset: 1976 - 2024
+- All features available: ['Butterfly_All_Species', 'Butterfly_Specialists', 'Butterfly_Generalists', 'Plants_Arable', 'Plants_Lowland_Grassland', 'Plants_Woodland', 'Agri_Env_Higher_Area', 'Agri_Env_Entry_Area', 'Habitat_Connectivity', 'Year_Numeric']
+- Missing values handled: Interpolation (spline)
+
+GENETIC ALGORITHM OPTIMISATION:
+- Best year range: 1983 - 2023
+- Selected features: ['Butterfly_All_Species', 'Butterfly_Generalists', 'Habitat_Connectivity', 'Year_Numeric']
+- Interpolation method: spline
+- Number of data points after filtering: 41
+
+RANDOM FOREST PERFORMANCE:
+- Training R²: 0.9972
+- Test R²: 0.9928
+- Cross-validation R² (mean ± std): 0.9815 ± 0.0130
+- Test RMSE: 0.9557
+- Test MAE: 0.7964
+
+TOP 4 IMPORTANT FEATURES:
+  1. Year_Numeric: 0.4283
+  2. Butterfly_Generalists: 0.2551
+  3. Butterfly_All_Species: 0.1925
+  4. Habitat_Connectivity: 0.1241
+
+KEY FINDINGS:
+- The pollinator index has declined from 100 (baseline in 1980) to approximately 77.3 in 2024.
+- The GA selected 4 features and optimised the analysis window to 1983-2023.
+- Spline interpolation was used to handle missing values across different dataset time ranges.
+- The Random Forest model achieved an R² of 0.9928 on the test set.
+- Cross-validation R² of 0.9815 ± 0.0130 indicates robust model stability.
+=====================================
